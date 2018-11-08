@@ -1,15 +1,23 @@
-pokemon = [];
 
 class Trainer {
-  constructor(name, gym) {
-    this.name = name,
-    this.gym = gym,
-    this.pokedex = [];
+  constructor() {
+    this.name = "Bruce Leeroy",
+    this.gym = "The Dojo",
+    this.pokemon = [];
 
     console.log("new trainer added");
   }
   all() {
     return this.pokemon;
+  }
+  get(name) {
+    for (i=0; i<pokemon;) {
+      if(name === pokemon[i]["name"]) {
+        return pokemon[i];
+      }else {
+        i ++;
+      }
+    }
   }
 }
 
@@ -19,34 +27,36 @@ class Pokemon {
     this.hp = hp,
     this.attack = attack,
     this.defense = defense,
-    this.abilities = abilities
+    this.abilities = []
   }
 }
 
 function getSnorlax() {
-  var xhttp = new XMLHttpRequest();
+  let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      let data = JSON.parse(this.responseText);
+      data = JSON.parse(this.responseText);
       let snorlax = new Pokemon (
         data["name"],
         data["stats"]["5"]["base_stat"],
         data["stats"]["4"]["base_stat"],
         data["stats"]["3"]["base_stat"],
-        [data["abilities"]["0"]["ability"]["name"],
-         data["abilities"]["1"]["ability"]["name"],
-         data["abilities"]["2"]["ability"]["name"]]);
-      pokemon.push(snorlax);
-      // document.getElementById("snorlax").innerHTML = pokemon;
-      console.log(snorlax);
-    }else {
-      return console.log("snorlax added to pokedex")
+        [
+          data["abilities"]["0"]["ability"]["name"],
+          data["abilities"]["1"]["ability"]["name"],
+          data["abilities"]["2"]["ability"]["name"]
+        ]
+      );
+        gymLeader.pokemon.push(snorlax);
+        return console.log("snorlax added to pokedex")
+
     }
   };
-  xhttp.open("GET","http://fizal.me/pokeapi/api/v2/name/snorlax.json", true);
+  xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/snorlax.json", true);
   xhttp.send();
 }
 
+document.addEventListener("onload",  gymLeader = new Trainer(), getSnorlax())
 
 
 // addPokemon (name,hp,atk,def,abilities) {
