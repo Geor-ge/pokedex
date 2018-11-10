@@ -1,5 +1,5 @@
 class Trainer {
-  constructor(gym, trainer, pokemon) {
+  constructor(gym, trainer) {
     this.gym = gym,
     this.trainer = trainer,
     this.pokemon = [];
@@ -7,8 +7,16 @@ class Trainer {
     console.log("new trainer added");
   }
   all() {
-    return this.pokemon;
+    for (let i=0; i<this.pokemon.length; i++) {
+      let pokedex = Object.entries(this.pokemon[i]);
+      console.log(this.pokemon[i]);
+      document.getElementById("pokedex").innerHTML = pokedex;
+
+    }
+
+    console.log(`${this.trainer}'s Pokedex`);
   }
+
   get(name) {
     for (let i=0; i<this.pokemon.length;) {
       if(name === this.pokemon[i]["name"]) {
@@ -26,9 +34,7 @@ class Pokemon {
     this.hp = hp,
     this.attack = attack,
     this.defense = defense,
-    this.abilities = abilities,
-    this.gym = gymLeader.gym,
-    this.trainer = gymLeader.trainer
+    this.abilities = abilities
   }
 }
 
@@ -49,7 +55,7 @@ function getSnorlax() {
         ]
       );
       gymLeader.pokemon.push(snorlax);
-      return console.log("Snorlax added to pokedex")
+      return console.log("Snorlax added to pokedex");
 
     }
   };
@@ -74,7 +80,8 @@ function getSawk() {
         ]
       );
         gymLeader.pokemon.push(sawk);
-        return console.log("Sawk added to pokedex")
+        return console.log("Sawk added to pokedex");
+
 
     }
   };
@@ -99,12 +106,41 @@ function getHit() {
         ]
       );
         gymLeader.pokemon.push(hitmonlee);
-        return console.log("Hitmonlee added to pokedex")
+        return console.log("Hitmonlee added to pokedex");
 
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/hitmonlee.json", true);
   xhttp.send();
 }
+// const aButton = document.getElementById("a button");
+// aButton.addEventListener("click", pressA());
+
+
+
+const aButton = document.getElementById("aButton");
+aButton.addEventListener("click", pressA());
+var count = 0;
+
+function pressA() {
+
+    if (count == 0 && aButton.click) {
+      document.getElementById("poke1").style.visibility = "hidden";
+      count += 1;
+      console.log(count);
+    }else if(count == 1 && aButton.click) {
+      document.getElementById("poke2").style.visibility = "hidden";
+      count ++
+      console.log(count);
+    }else if (count == 2 && aButton.click) {
+      document.getElementById("poke3").style.visibility = "hidden";
+      count ++
+      console.log(count);
+    }else {
+      return count;
+    }
+  }
+
+
 
 document.addEventListener("onload",  gymLeader = new Trainer("The Dojo", "Bruce Leeroy"), getSnorlax(), getSawk(), getHit());
