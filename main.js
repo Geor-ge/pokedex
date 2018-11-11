@@ -103,17 +103,17 @@ function getHit() {
   xhttp.send();
 }
 
+document.addEventListener("onload",  gymLeader = new Trainer("The Dojo", "Bruce Leeroy"), getSnorlax(), getSawk(), getHit());
 
-const aButton = document.getElementById("aButton");
+
+var aButton = document.getElementById("aButton");
+var bButton = document.getElementById("bButton");
+var startButton = document.getElementById("startButton");
+
 aButton.addEventListener("click", pressA());
-var countA = 0;
-
-// const bButton = document.getElementById("bButton");
-// bButton.addEventListener("click", pressB());
-// var countB = 0;
-//
-const startButton = document.getElementById("startButton");
+bButton.addEventListener("click", pressB());
 startButton.addEventListener("click", pressStart());
+var pageCount = 1;
 
 
 // const selectButton = document.getElementById("selectButton");
@@ -121,31 +121,45 @@ startButton.addEventListener("click", pressStart());
 // var countSelect = 0;
 
 function pressA() {
-
-  if (countA == 0 && aButton.click) {
-    document.getElementById("poke1").style.display = "none";
-    countA ++;
-    console.log(countA);
-  }else if(countA == 1 && aButton.click) {
-    document.getElementById("poke2").style.display = "none";
-    countA ++;
-    console.log(countA);
-  }else if (countA == 2 && aButton.click) {
-    document.getElementById("poke3").style.display = "none";
-    countA ++;
-    console.log(countA);
+  if (pageCount == 1 && aButton.click) {
+    document.getElementById("page1").style.display = "none";
+    console.log(pageCount);
+    pageCount ++;
+  }else if(pageCount == 2 && aButton.click) {
+    document.getElementById("page2").style.display = "none";
+    console.log(pageCount);
+    pageCount ++;
+  }else if (pageCount == 3 && aButton.click) {
+    document.getElementById("page3").style.display = "none";
+    console.log(pageCount);
+    pageCount ++;
   }else {
   }
 }
 
+function pressB() {
+  if (pageCount == 4 && bButton.click) {
+    document.getElementById("page3").style.display = "block";
+    console.log(pageCount);
+    pageCount --;
+  }else if(pageCount == 3 && bButton.click) {
+    document.getElementById("page2").style.display = "block";
+    console.log(pageCount);
+    pageCount --;
+  }else if (pageCount == 2 && aButton.click) {
+    document.getElementById("page1").style.display = "block";
+    console.log(pageCount);
+    pageCount --;
+  }else {
+  }
+}
+
+
 function pressStart() {
-  countA = 0;
+  pageCount = 1;
   let homepage = document.getElementsByClassName("hide");
   for (i=0; i<homepage.length; i++){
     homepage[i].style.display = "block";
   }
 
 }
-
-
-document.addEventListener("onload",  gymLeader = new Trainer("The Dojo", "Bruce Leeroy"), getSnorlax(), getSawk(), getHit());
