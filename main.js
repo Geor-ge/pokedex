@@ -3,20 +3,13 @@ class Trainer {
     this.gym = gym,
     this.trainer = trainer,
     this.pokemon = [];
-
     console.log("new trainer added");
   }
   all() {
-    for (let i=0; i<this.pokemon.length; i++) {
-      let pokedex = Object.entries(this.pokemon[i]);
-      console.log(this.pokemon[i]);
-      document.getElementById("pokedex").innerHTML = pokedex;
-
-    }
-
+    console.log(this.pokemon);
+    // document.getElementById("allPokemon").innerHTML = allPokemon;
     console.log(`${this.trainer}'s Pokedex`);
   }
-
   get(name) {
     for (let i=0; i<this.pokemon.length;) {
       if(name === this.pokemon[i]["name"]) {
@@ -55,8 +48,7 @@ function getSnorlax() {
         ]
       );
       gymLeader.pokemon.push(snorlax);
-      return console.log("Snorlax added to pokedex");
-
+      console.log("Snorlax added to pokedex");
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/snorlax.json", true);
@@ -80,9 +72,7 @@ function getSawk() {
         ]
       );
         gymLeader.pokemon.push(sawk);
-        return console.log("Sawk added to pokedex");
-
-
+        console.log("Sawk added to pokedex");
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/sawk.json", true);
@@ -106,41 +96,56 @@ function getHit() {
         ]
       );
         gymLeader.pokemon.push(hitmonlee);
-        return console.log("Hitmonlee added to pokedex");
-
+        console.log("Hitmonlee added to pokedex");
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/hitmonlee.json", true);
   xhttp.send();
 }
-// const aButton = document.getElementById("a button");
-// aButton.addEventListener("click", pressA());
-
 
 
 const aButton = document.getElementById("aButton");
 aButton.addEventListener("click", pressA());
-var count = 0;
+var countA = 0;
+
+// const bButton = document.getElementById("bButton");
+// bButton.addEventListener("click", pressB());
+// var countB = 0;
+//
+const startButton = document.getElementById("startButton");
+startButton.addEventListener("click", pressStart());
+
+
+// const selectButton = document.getElementById("selectButton");
+// selectButton.addEventListener("click", pressSelect());
+// var countSelect = 0;
 
 function pressA() {
 
-    if (count == 0 && aButton.click) {
-      document.getElementById("poke1").style.visibility = "hidden";
-      count += 1;
-      console.log(count);
-    }else if(count == 1 && aButton.click) {
-      document.getElementById("poke2").style.visibility = "hidden";
-      count ++
-      console.log(count);
-    }else if (count == 2 && aButton.click) {
-      document.getElementById("poke3").style.visibility = "hidden";
-      count ++
-      console.log(count);
-    }else {
-      return count;
-    }
+  if (countA == 0 && aButton.click) {
+    document.getElementById("poke1").style.display = "none";
+    countA ++;
+    console.log(countA);
+  }else if(countA == 1 && aButton.click) {
+    document.getElementById("poke2").style.display = "none";
+    countA ++;
+    console.log(countA);
+  }else if (countA == 2 && aButton.click) {
+    document.getElementById("poke3").style.display = "none";
+    countA ++;
+    console.log(countA);
+  }else {
+  }
+}
+
+function pressStart() {
+  countA = 0;
+  let homepage = document.getElementsByClassName("hide");
+  for (i=0; i<homepage.length; i++){
+    homepage[i].style.display = "block";
   }
 
+}
 
 
 document.addEventListener("onload",  gymLeader = new Trainer("The Dojo", "Bruce Leeroy"), getSnorlax(), getSawk(), getHit());
