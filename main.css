@@ -92,6 +92,14 @@ body{
   right: 14.25%;
   border-radius: 50%;
 }
+#b-btn{
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 38.5%;
+  right: 21.5%;
+  border-radius: 50%;
+}
 
 .btn-style{
   width: 5%;
