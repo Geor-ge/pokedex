@@ -64,24 +64,33 @@ body{
 }
 #left-btn{
   width: 45px;
-  height: 40px;
+  height: 45px;
   position: absolute;
-  top: 38%;
+  top: 37.75%;
   left: 15.8%;
 }
 #right-btn{
   width: 45px;
-  height: 40px;
+  height: 45px;
   position: absolute;
-  top: 38%;
+  top: 37.75%;
   left: 23%;
 }
 #start-btn{
-  width: 33px;
-  height: 33px;
+  width: 34px;
+  height: 34px;
   position: absolute;
   top: 63%;
-  left: 25.125%;
+  left: 25%;
+  border-radius: 50%;
+}
+#a-btn{
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 33.125%;
+  right: 14.25%;
+  border-radius: 50%;
 }
 
 .btn-style{
