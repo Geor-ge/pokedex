@@ -4,34 +4,54 @@
   <meta charset="utf-8">
   <title>The Dojo</title>
 
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="main.css" type="text/css" rel="stylesheet">
 
 
 </head>
-<body>
-  <!-- <button onclick="gymLeader.all()">Show Pokedex</button> -->
-  <button id="aButton" onclick="pressA()">A</button>
-  <button id="bButton" onclick="pressB()">B</button>
-  <button id="startButton" onclick="pressStart()">START</button>
-  <div id="page1" class="hide"><h1>TEST-1</h1></div>
-  <div id="page2" class="hide"><h1>TEST-2</h1></div>
-  <div id="page3" class="hide"><h1>TEST-3</h1></div>
+<body >
+
+  <div id ="gba">
+    <div id="buttons">
+      <button id="left-btn" class="btn-style arrow" onclick="pressLeft()"></button>
+      <button id="right-btn" class="btn-style arrow" onclick="pressRight()"></button>
+      <button id="start-btn" class="btn-style" onclick="pressStart()"></button>
+      <button id="a-btn" class="btn-style" onclick="pressA()"></button>
+      <button id="b-btn" class="btn-style" onclick="pressB()"></button>
+    </div>
+    <div id="screen">
+      <div id="page1" class="start-over page">Welcome to <em>The Dojo</em></div>
+      <div id="page2" class="start-over page">Gym Leader: Bruce Leeroy</div>
+      <div id="page3" class="start-over page">
+        <img src="./images/hitmonlee.png">
+        <p id="page3a" class="stats">Hitmonlee</p>
+      </div>
+      <div id="page4" class="start-over page">
+        <img src="./images/sawk.png">
+        <p id="page4a" class="stats">Sawk</p>
+      </div>
+      <div id="page5" class="start-over page">
+        <img src="./images/snorlax.png">
+        <p id="page5a" class="stats">Snorlax</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+     <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="./images/pokeball.jpg" alt="First slide">
+      <img class="d-inline w-100" src="./images/pokeball.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./images/hitmonlee.png" alt="Second slide">
+      <img class="d-inline w-100" src="./images/hitmonlee.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./images/sawk.png" alt="Third slide">
+      <img class="d-inline w-100" src="./images/sawk.png" alt="Third slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./images/snorlax.png" alt="Forth slide">
+      <img class="d-inline w-100" src="./images/snorlax.png" alt="Forth slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -42,7 +62,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

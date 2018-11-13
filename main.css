@@ -60,7 +60,7 @@ body{
 }
 
 #buttons{
-  opacity: .1;
+  opacity: 1;
 }
 #left-btn{
   width: 45px;
@@ -76,8 +76,13 @@ body{
   top: 38%;
   left: 23%;
 }
-
-
+#start-btn{
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  top: 63%;
+  left: 25.125%;
+}
 
 .btn-style{
   width: 5%;

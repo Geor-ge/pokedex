@@ -122,20 +122,10 @@ aButton.addEventListener("click", pressA());
 // bButton.addEventListener("click", pressB());
 startButton.addEventListener("click", pressStart());
 
-if (pageNumber == 1){
-  document.getElementById("left-btn").style.opacity = ".3";
-}else{
-
-}
-
-
-// const selectButton = document.getElementById("selectButton");
-
 
 function pressRight() {
   if (pageNumber == 1 && rightButton.click) {
     document.getElementById("page1").style.display = "none";
-    document.getElementById("left-btn").style.opacity = "1";
     pageNumber ++;
     console.log(`You are on page: ${pageNumber}`);
   }else if(pageNumber == 2 && rightButton.click) {
@@ -148,7 +138,6 @@ function pressRight() {
     console.log(`You are on page: ${pageNumber}`)
   }else if (pageNumber == 4 && rightButton.click) {
     document.getElementById("page4").style.display = "none";
-    document.getElementById("right-btn").style.opacity = ".3";
     pageNumber ++;
     console.log(`You are on page: ${pageNumber}`);
   }else {
@@ -157,7 +146,6 @@ function pressRight() {
 
 function pressLeft() {
   if (pageNumber == 5 && leftButton.click) {
-    document.getElementById("right-btn").style.opacity = "1";
     document.getElementById("page4").style.display = "block";
     pageNumber --;
     console.log(`You are on page: ${pageNumber}`);
@@ -171,7 +159,6 @@ function pressLeft() {
     console.log(`You are on page: ${pageNumber}`);
   }else if (pageNumber == 2 && leftButton.click) {
     document.getElementById("page1").style.display = "block";
-    document.getElementById("left-btn").style.opacity = ".3";
     pageNumber --;
     console.log(`You are on page: ${pageNumber}`);
   }else {
@@ -211,8 +198,6 @@ function pressStart() {
   pageNumber = 1;
   console.log(`You are on page: ${pageNumber}`)
   let homepage = document.getElementsByClassName("start-over");
-  document.getElementById("left-btn").style.opacity = ".3";
-  document.getElementById("right-btn").style.opacity = "1";
   for (i=0; i<homepage.length; i++){
     homepage[i].style.display = "block";
   }
