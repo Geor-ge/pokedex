@@ -1,0 +1,85 @@
+*{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body{
+
+
+  background-color: #515151;
+}
+
+
+#gba{
+  display: grid;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/gba1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.page{
+  position: absolute;
+  top: 19%;
+  left: 32%;
+  width: 35.5%;
+  height: 52%;
+  background-image: url("./images/pokeball1.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+
+#page1{
+  z-index: 5;
+}
+#page2{
+  z-index: 4;
+}
+#page3{
+  z-index: 3;
+}
+#page4{
+  z-index: 2;
+}
+#page5{
+  z-index: 1;
+}
+
+.stats{
+  visibility: hidden;
+  z-index: 6;
+}
+
+#buttons{
+  opacity: .1;
+}
+#left-btn{
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  top: 38%;
+  left: 15.8%;
+}
+#right-btn{
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  top: 38%;
+  left: 23%;
+}
+
+
+
+.btn-style{
+  width: 5%;
+  height: auto;
+}
