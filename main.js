@@ -57,6 +57,7 @@ function getHit() {
 }
 
 
+
 function getSawk() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
