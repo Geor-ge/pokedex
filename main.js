@@ -10,8 +10,8 @@ class Trainer {
     console.log(this.pokemon);
   }
   get(name) {
-    let input = name.toLowerCase();
-    for (let i=0; i<this.pokemon.length;) {
+    var input = name.toLowerCase();
+    for (var i=0; i<this.pokemon.length;) {
       if(input === this.pokemon[i]["name"]) {
         return this.pokemon[i];
       }else {
@@ -32,11 +32,11 @@ class Pokemon {
 }
 
 function getHit() {
-  let xhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       data = JSON.parse(this.responseText);
-      let hitmonlee = new Pokemon (
+      var hitmonlee = new Pokemon (
         data["name"],
         data["stats"]["5"]["base_stat"],
         data["stats"]["4"]["base_stat"],
@@ -48,7 +48,8 @@ function getHit() {
         ]
       );
       gymLeader.pokemon.splice(0,0,hitmonlee);
-      console.log("Hitmonlee added to pokemon");
+      page3a = document.getElementById("page3a");
+      page3a.innerHTML = Object.entries(hitmonlee);
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/hitmonlee.json", true);
@@ -57,11 +58,11 @@ function getHit() {
 
 
 function getSawk() {
-  let xhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       data = JSON.parse(this.responseText);
-      let sawk = new Pokemon (
+      var sawk = new Pokemon (
         data["name"],
         data["stats"]["5"]["base_stat"],
         data["stats"]["4"]["base_stat"],
@@ -73,6 +74,8 @@ function getSawk() {
         ]
       );
         gymLeader.pokemon.splice(1,0,sawk);
+        page4a = document.getElementById("page4a");
+        page4a.innerHTML = Object.entries(sawk);
         console.log("Sawk added to pokemon");
     }
   };
@@ -81,11 +84,11 @@ function getSawk() {
 }
 
 function getSnorlax() {
-  let xhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       data = JSON.parse(this.responseText);
-      let snorlax = new Pokemon (
+      var snorlax = new Pokemon (
         data["name"],
         data["stats"]["5"]["base_stat"],
         data["stats"]["4"]["base_stat"],
@@ -97,6 +100,8 @@ function getSnorlax() {
         ]
       );
       gymLeader.pokemon.splice(2,0,snorlax);
+      page5a = document.getElementById("page5a");
+      page5a.innerHTML = Object.entries(snorlax);
       console.log("Snorlax added to pokemon");
     }
   };
@@ -194,7 +199,7 @@ function pressB() {
 }
 
 function pressStart() {
-  let homepage = document.getElementsByClassName("start-over");
+  var homepage = document.getElementsByClassName("start-over");
   for (i=0; i<homepage.length; i++){
     homepage[i].style.display = "block";
   }
