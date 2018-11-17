@@ -39,29 +39,52 @@ body{
 
 
 #page1{
+  background-image: url("./images/dojo.jpg");
+  background-position: center;
+  background-size: cover;
   z-index: 5;
 }
 #page2{
   z-index: 4;
-  font-size: 1.5em;
-  text-align: justify;
+  background-image: url("./images/bruce.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 #page3{
   z-index: 3;
-}
-.stats{
-  text-align: center;
-  text-transform: uppercase;
-  display: none;
-  z-index: 7;
+  background-image: url("./images/pokeball1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #page4{
   z-index: 2;
+  background-image: url("./images/pokeball1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 #page5{
   z-index: 1;
+  background-image: url("./images/pokeball1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.stats{
+  position: absolute;
+  top: 18.7%;
+  left: 32%;
+  width: 35.75%;
+  height: 52.75%;
+  border-radius: 2%;
+  background-image: url("./images/pokeball1.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+  z-index: 7;
 }
 
 #buttons{

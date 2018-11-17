@@ -48,8 +48,13 @@ function getHit() {
         ]
       );
       gymLeader.pokemon.splice(0,0,hitmonlee);
+      console.log("Hitmonlee added to pokemon");
       page3a = document.getElementById("page3a");
-      page3a.innerHTML = Object.entries(hitmonlee);
+      page3a.innerHTML = (`<span>Name: ${hitmonlee.name}<span><br>`);
+      page3a.innerHTML += (`<span>HP: ${hitmonlee.hp}<span><br>`);
+      page3a.innerHTML += (`<span>ATK: ${hitmonlee.attack}<span><br>`);
+      page3a.innerHTML += (`<span>DEF: ${hitmonlee.defense}<span><br>`);
+      page3a.innerHTML += (`<span>ABILITIES: ${hitmonlee.abilities}<span>`);
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/hitmonlee.json", true);
@@ -74,9 +79,12 @@ function getSawk() {
         ]
       );
         gymLeader.pokemon.splice(1,0,sawk);
-        page4a = document.getElementById("page4a");
-        page4a.innerHTML = Object.entries(sawk);
         console.log("Sawk added to pokemon");
+        page4a.innerHTML = (`<span>Name: ${sawk.name}<span><br>`);
+        page4a.innerHTML += (`<span>HP: ${sawk.hp}<span><br>`);
+        page4a.innerHTML += (`<span>ATK: ${sawk.attack}<span><br>`);
+        page4a.innerHTML += (`<span>DEF: ${sawk.defense}<span><br>`);
+        page4a.innerHTML += (`<span>ABILITIES: ${sawk.abilities}<span>`);
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/sawk.json", true);
@@ -100,9 +108,12 @@ function getSnorlax() {
         ]
       );
       gymLeader.pokemon.splice(2,0,snorlax);
-      page5a = document.getElementById("page5a");
-      page5a.innerHTML = Object.entries(snorlax);
       console.log("Snorlax added to pokemon");
+      page5a.innerHTML = (`<span>Name: ${snorlax.name}<span><br>`);
+      page5a.innerHTML += (`<span>HP: ${snorlax.hp}<span><br>`);
+      page5a.innerHTML += (`<span>ATK: ${snorlax.attack}<span><br>`);
+      page5a.innerHTML += (`<span>DEF: ${snorlax.defense}<span><br>`);
+      page5a.innerHTML += (`<span>ABILITIES: ${snorlax.abilities}<span>`);
     }
   };
   xhttp.open("GET","https://fizal.me/pokeapi/api/v2/name/snorlax.json", true);
@@ -175,10 +186,12 @@ function pressA() {
     page3a.style.display = "block";
     console.log("a button pressed");
   }else if (pageNumber == 4 && aButton.click) {
-    document.getElementById("page4a").style.display = "block";
+    page4a.style.zIndex = 7;
+    page4a.style.display = "block";
     console.log("a button pressed");
   }else if(pageNumber == 5 && aButton.click) {
-    document.getElementById("page5a").style.display = "block";
+    page5a.style.zIndex = 7;
+    page5a.style.display = "block";
     console.log("a button pressed");
   }else{
   }
