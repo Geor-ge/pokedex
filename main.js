@@ -50,7 +50,7 @@ function getHit() {
       gymLeader.pokemon.splice(0,0,hitmonlee);
       console.log("Hitmonlee added to pokemon");
       page3a = document.getElementById("page3a");
-      page3a.innerHTML = (`<span>Name: ${hitmonlee.name}<span><br>`);
+      page3a.innerHTML = (`<span>Name: ${hitmonlee.name}</span><br>`);
       page3a.innerHTML += (`<span>HP: ${hitmonlee.hp}<span><br>`);
       page3a.innerHTML += (`<span>ATK: ${hitmonlee.attack}<span><br>`);
       page3a.innerHTML += (`<span>DEF: ${hitmonlee.defense}<span><br>`);
@@ -139,6 +139,7 @@ function pressRight() {
     console.log(`You are on page: ${pageNumber}`);
   }else if(pageNumber == 2 && rightButton.click) {
     document.getElementById("page2").style.display = "none";
+    document.getElementById("page2a").style.display = "none";
     pageNumber ++;
     console.log(`You are on page: ${pageNumber}`);
   }else if (pageNumber == 3 && rightButton.click) {
@@ -172,6 +173,7 @@ function pressLeft() {
     pageNumber --;
     console.log(`You are on page: ${pageNumber}`);
   }else if (pageNumber == 2 && leftButton.click) {
+    document.getElementById("page2a").style.display = "none";
     document.getElementById("page1").style.display = "block";
     pageNumber --;
     console.log(`You are on page: ${pageNumber}`);
@@ -181,7 +183,11 @@ function pressLeft() {
 
 
 function pressA() {
-  if (pageNumber == 3 && aButton.click) {
+  if (pageNumber == 2 && aButton.click) {
+    page2a.style.zIndex = 7;
+    page2a.style.display = "block";
+    console.log("a button pressed");
+  }else if (pageNumber == 3 && aButton.click) {
     page3a.style.zIndex = 7;
     page3a.style.display = "block";
     console.log("a button pressed");
@@ -198,7 +204,10 @@ function pressA() {
 }
 
 function pressB() {
-  if (pageNumber == 3 && bButton.click) {
+  if (pageNumber == 2 && bButton.click) {
+    page2a.style.display = "none";
+    console.log("b button pressed");
+  }else if (pageNumber == 3 && bButton.click) {
     page3a.style.display = "none";
     console.log("b button pressed");
   }else if (pageNumber == 4 && bButton.click) {
@@ -216,9 +225,10 @@ function pressStart() {
   for (i=0; i<homepage.length; i++){
     homepage[i].style.display = "block";
   }
-  document.getElementById("page3a").style.visibility = "hidden";
-  document.getElementById("page4a").style.visibility = "hidden";
-  document.getElementById("page5a").style.visibility = "hidden";
+  document.getElementById("page2a").style.display = "none";
+  document.getElementById("page3a").style.display = "none";
+  document.getElementById("page4a").style.display = "none";
+  document.getElementById("page5a").style.display = "none";
   pageNumber = 1;
   console.log(`You are on page: ${pageNumber}`)
 }

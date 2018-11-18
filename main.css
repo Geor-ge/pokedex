@@ -6,7 +6,7 @@
 }
 
 body{
-  font-family: Courgette, cursive, sans;
+  font-family: 'Press Start 2P', cursive;
   background-image: url("./images/pokemons.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,16 +32,28 @@ body{
   width: 35.75%;
   height: 52.75%;
   border-radius: 2%;
-  background-image: url("./images/pokeball1.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: #8AA100;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats{
+  display: none;
+  align-items: center;
+  z-index: 7;
+  position: absolute;
+  top: 18.7%;
+  left: 32%;
+  width: 35.75%;
+  height: 52.75%;
+  border-radius: 2%;
+  background-color: #8AA100;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
 #page1{
-  background-image: url("./images/dojo.jpg");
-  background-position: center;
-  background-size: cover;
   z-index: 5;
 }
 #page2{
@@ -71,21 +83,6 @@ body{
   background-size: cover;
 }
 
-.stats{
-  position: absolute;
-  top: 18.7%;
-  left: 32%;
-  width: 35.75%;
-  height: 52.75%;
-  border-radius: 2%;
-  background-image: url("./images/pokeball1.jpg");
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  text-transform: uppercase;
-  display: none;
-  z-index: 7;
-}
 
 #buttons{
   opacity: 0;
