@@ -50,7 +50,8 @@ function getHit() {
       gymLeader.pokemon.splice(0,0,hitmonlee);
       console.log("Hitmonlee added to pokemon");
       page3a = document.getElementById("page3a");
-      page3a.innerHTML = (`<span>Name: ${hitmonlee.name}</span><br>`);
+      page3a.innerHTML = "<br><br><br>"
+      page3a.innerHTML += (`<span>Name: ${hitmonlee.name}</span><br>`);
       page3a.innerHTML += (`<span>HP: ${hitmonlee.hp}<span><br>`);
       page3a.innerHTML += (`<span>ATK: ${hitmonlee.attack}<span><br>`);
       page3a.innerHTML += (`<span>DEF: ${hitmonlee.defense}<span><br>`);
@@ -80,7 +81,8 @@ function getSawk() {
       );
         gymLeader.pokemon.splice(1,0,sawk);
         console.log("Sawk added to pokemon");
-        page4a.innerHTML = (`<span>Name: ${sawk.name}<span><br>`);
+        page4a.innerHTML = "<br><br><br>"
+        page4a.innerHTML += (`<span>Name: ${sawk.name}<span><br>`);
         page4a.innerHTML += (`<span>HP: ${sawk.hp}<span><br>`);
         page4a.innerHTML += (`<span>ATK: ${sawk.attack}<span><br>`);
         page4a.innerHTML += (`<span>DEF: ${sawk.defense}<span><br>`);
@@ -109,7 +111,8 @@ function getSnorlax() {
       );
       gymLeader.pokemon.splice(2,0,snorlax);
       console.log("Snorlax added to pokemon");
-      page5a.innerHTML = (`<span>Name: ${snorlax.name}<span><br>`);
+      page5a.innerHTML = "<br><br><br>"
+      page5a.innerHTML += (`<span>Name: ${snorlax.name}<span><br>`);
       page5a.innerHTML += (`<span>HP: ${snorlax.hp}<span><br>`);
       page5a.innerHTML += (`<span>ATK: ${snorlax.attack}<span><br>`);
       page5a.innerHTML += (`<span>DEF: ${snorlax.defense}<span><br>`);
