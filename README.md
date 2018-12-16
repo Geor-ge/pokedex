@@ -1,11 +1,13 @@
 # Personal Pokedex
 The purpose of this project was to build a website that showcases information about three pokemon.
-The data about the pokemon was retrieved using Javascript AJAX calls.
 
 ## Inspiration
 I wanted the interface of this site to feel like you were using a Gameboy Advance. 
 I actual page is displayed on the screen of the Gameboy and buttons were made functional using HTML button elements along
 with Javascript.
+
+### Technology used
+`HTML CSS JavaScript AJAX`
 
 ### Controls
 ```
